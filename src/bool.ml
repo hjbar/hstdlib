@@ -9,10 +9,7 @@ let (&&) b1 b2 =
 let (||) b1 b2 =
   if b1 then
     true
-  else if b2 then
-    true
-  else
-    false
+  else if b2
 
 let equal b1 b2 =
   if b1 then b2
@@ -34,3 +31,9 @@ let to_float b =
 let to_string b =
   if b then "true"
   else "false"
+
+let of_string b =
+  if b = "true" then
+    true
+  else
+    false
